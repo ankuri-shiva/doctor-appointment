@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import MyProfile from "./components/MyProfile";
 import Body from "./components/Body";
 import Appointment from "./components/Appointment";
+import AddDoctor from "./components/AddDoctor";
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
     <Routes>
       <Route path = "/" element = {<Body/>}>
         <Route path = "/" element = {<DoctorsFeed />}/>
+        <Route path = "/add-doctor" element = {<AddDoctor />}/>
+        <Route path = "/doctors" element = {<DoctorsFeed />}/>
         <Route path = "/login" element = {<Login />}/>
         <Route path = "/profile" element = {<MyProfile />}/>
         <Route path = "/appointment" element = {<Appointment />}/>

@@ -31,6 +31,10 @@ const DoctorsFeed = () => {
     navigate('/appointment', {state: {doctorId: doctId}});
   }
 
+  const handleAddDoctor = () => {
+    navigate('/add-doctor');
+  };
+
   if(!doctorsFeed) return;
 
   return (
@@ -54,6 +58,7 @@ const DoctorsFeed = () => {
         </div>
         </div>
       )})}
+      <button className="btn btn-primary" onClick = {handleAddDoctor}>Add Doctor</button>
     </div>
     )}
 
