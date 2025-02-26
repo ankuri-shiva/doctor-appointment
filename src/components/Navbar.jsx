@@ -1,5 +1,17 @@
+import { useDispatch } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { removeUser } from "../utils/userSlice"
 
 const Navbar = () => {
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  const handleLogout = () => {
+    dispatch(removeUser());
+    navigate("/login");
+  }
+
   return (
     <div className="navbar bg-neutral">
     <div className="flex-1">
@@ -10,8 +22,8 @@ const Navbar = () => {
         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
           <div className="w-10 rounded-full">
             <img
-              alt="Tailwind CSS Navbar component"
-              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+              alt="More"
+              src="" />
           </div>
         </div>
         <ul
@@ -22,8 +34,8 @@ const Navbar = () => {
               Profile
             </a>
           </li>
-          <li><a>My Appointmen ts</a></li>
-          <li><a>Logout</a></li>
+          <li><a>My Appointments</a></li>
+          <li onClick= {handleLogout}><a>Logout</a></li>
         </ul>
       </div>
     </div>

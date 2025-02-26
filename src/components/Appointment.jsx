@@ -131,9 +131,6 @@ const Appointment = () => {
                     return <option key={optionDate} value={optionDate}>{optionDate}</option>})}
             </select>
             
-            {/* <input value= {date} type="date" placeholder="Type here"
-            onChange = {handleSelectDate}
-             className="input input-bordered w-full max-w-xs  bg-slate-300  text-gray-700" /> */}
         </label>
 
         <label className="form-control w-full max-w-xs text-left mb-5">
